@@ -9,8 +9,8 @@ class BookActorRemote extends Actor {
   import com.omega.actor.transport.BookTransport._
 
   override def receive = {
-    case b @ BookCreated(id, name) => println(b)
-    case b @ BookUpdated(id, name) => println(b)
+    case b @ BookCreated(_, _) => println(b)
+    case b @ BookUpdated(_, _) => println(b)
     case x => println(x)
   }
 }
